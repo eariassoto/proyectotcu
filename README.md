@@ -1,5 +1,6 @@
 # Sobre hardware #
 http://www.instructables.com/id/The-EyeWriter/ Versión 1
+
 http://www.instructables.com/id/The-EyeWriter-20/ Versión 2
 
 # Sobre el software #
