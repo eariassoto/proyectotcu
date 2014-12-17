@@ -4,7 +4,7 @@ http://www.instructables.com/id/The-EyeWriter/ Versión 1
 http://www.instructables.com/id/The-EyeWriter-20/ Versión 2
 
 # Sobre el software #
-Importante: Ubicar la carpeta de este repositorio en C:, osea tiene que quedar C:\proyectotcu de lo contrario no reconcoe librerías
+Importante: Ubicar la carpeta de este repositorio en C:, osea tiene que quedar C:\proyectotcu de lo contrario no reconoce librerías
 
 ## Versión 1 ##
 Para **correr el programa** ubicar el folder C:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\bin el archivo eyewriter.exe y ejecutarlo
