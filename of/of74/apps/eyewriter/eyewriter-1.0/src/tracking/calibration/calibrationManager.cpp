@@ -6,8 +6,8 @@ void calibrationManager::setup(){
 	calibrationInfo.loadImage("images/calibrationInfo.png");
 	font.loadFont("fonts/HelveticaNeueMed.ttf", 32);
 
-	nDivisionsWidth = 3;
-	nDivisionsHeight = 3;
+	nDivisionsWidth = 5;
+	nDivisionsHeight = 5;
 
 	nPosition = 0;
 	pos  = 0;
@@ -35,36 +35,36 @@ void calibrationManager::setup(){
 
 	smoothing = 1.0f;
 	menuEnergy = 1;
-	
+
 	bPreAutomatic = false;
 
 }
 
 //--------------------------------------------------------------
 void calibrationManager::start(){
-	
+
 	bAutomatic = true;
 	bAmInAutodrive = true;
 	startTime = ofGetElapsedTimef();
-	
+
 	fitter.startCalibration();
 }
 
 //--------------------------------------------------------------
 void calibrationManager::stop(){
-	
+
 	bAutomatic = false;
 	bPreAutomatic = false;
 	bAmInAutodrive = false;
 	startTime = ofGetElapsedTimef();
 	nPosition = 0;
 	pos  = 0;
-	
+
 }
 
 //--------------------------------------------------------------
 void calibrationManager::update(){
-	
+
 	// TODO: rewrite the code to control calibration mode.
 	// bAuto--, bPre--- are not friendly to understand how it works.
 
@@ -80,7 +80,7 @@ void calibrationManager::update(){
 	calibrationRectangle.y += heightPad;
 	calibrationRectangle.width -= widthPad*2;
 	calibrationRectangle.height -= heightPad*2;
-	
+
 	updateControlPanel();
 
 	// TODO:make it possible to change nDivisions?
@@ -88,7 +88,7 @@ void calibrationManager::update(){
 //	nDivisionsHeight = panel.getValueI("N_DIV_H");;
 
 	fitter.removeOutliers();
-	
+
 	totalTimePerDot = preTimePerDot + recordTimePerDot;
 
 	if ((bAutomatic == true && bAmInAutodrive == true) || bPreAutomatic){
@@ -96,18 +96,18 @@ void calibrationManager::update(){
 	} else {
 		menuEnergy = 0.94f * menuEnergy + 0.06f * 1.0f;
 	}
-	
+
 	// do the auto:
 	if (bAutomatic == true && bAmInAutodrive == true){
 		int nPts = nDivisionsWidth * nDivisionsHeight;
 		float totalTime = totalTimePerDot * nPts;
-		
+
 		if (ofGetElapsedTimef() - startTime > totalTime){		// calibration finish.
 			bAmInAutodrive = false;
 			bInAutoRecording = false;
 			bPreAutomatic = false;
 			fitter.calculate(calibrationRectangle);
-			
+
 		} else {
 
 			float diffTime = ofGetElapsedTimef() - startTime ;
@@ -139,7 +139,7 @@ void calibrationManager::update(){
 				 calibrationRectangle.x + (calibrationRectangle.width - ((float)calibrationRectangle.width / (float)(nDivisionsWidth-1)) * xx);
 
 	yp = calibrationRectangle.y + calibrationRectangle.height - ((float)calibrationRectangle.height / (float)(nDivisionsHeight-1)) * yy;
-	
+
 	fitter.update(pt, xp, yp);		// raw data is comming from testApp directly to fitter.
 }
 
@@ -222,7 +222,7 @@ void calibrationManager::draw(){
 		ofSetColor(255, 255, 255);
 		//calibrationInfo.draw(100,100);
 	}
-	
+
 	//-----------------------------------------------------------------------
 	//-----------------------------------------------------------------------
 
@@ -243,7 +243,7 @@ void calibrationManager::draw(){
 	}
 
 	fitter.draw();
-    
+
     //panel.draw();
 }
 
@@ -282,7 +282,7 @@ void calibrationManager::keyPressed(int key) {
 			bPreAutomatic = false;
 			start();
 		}
-	}else if (bPreAutomatic == false && !bAmInAutodrive) { 
+	}else if (bPreAutomatic == false && !bAmInAutodrive) {
 		if (key == ' '){
 			bPreAutomatic = true;
 		}

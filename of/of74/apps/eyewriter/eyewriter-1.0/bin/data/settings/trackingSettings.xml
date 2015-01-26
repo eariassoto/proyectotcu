@@ -5,49 +5,49 @@
     <val_0>0.000000000</val_0>
 </B_RIGHT_FLIP_X>
 <B_RIGHT_FLIP_Y>
-    <val_0>1.000000000</val_0>
+    <val_0>0.000000000</val_0>
 </B_RIGHT_FLIP_Y>
 <B_USE_CONTRAST>
-    <val_0>0.000000000</val_0>
+    <val_0>1.000000000</val_0>
 </B_USE_CONTRAST>
 <CONTRAST>
-    <val_0>0.280000001</val_0>
+    <val_0>0.500000000</val_0>
 </CONTRAST>
 <BRIGHTNESS>
-    <val_0>-0.020000000</val_0>
+    <val_0>0.333333343</val_0>
 </BRIGHTNESS>
 <B_USE_GAMMA>
     <val_0>1.000000000</val_0>
 </B_USE_GAMMA>
 <GAMMA>
-    <val_0>1.399999976</val_0>
+    <val_0>1.289055586</val_0>
 </GAMMA>
 <THRESHOLD_GAZE>
-    <val_0>51.000000000</val_0>
+    <val_0>38.250000000</val_0>
 </THRESHOLD_GAZE>
 <B_USE_DILATE>
-    <val_0>0.000000000</val_0>
+    <val_0>1.000000000</val_0>
 </B_USE_DILATE>
 <N_DILATIONS>
-    <val_0>0.000000000</val_0>
+    <val_0>3.333333254</val_0>
 </N_DILATIONS>
 <MIN_BLOB>
-    <val_0>473.222229004</val_0>
+    <val_0>888.888916016</val_0>
 </MIN_BLOB>
 <MAX_BLOB>
     <val_0>29738.888671875</val_0>
 </MAX_BLOB>
 <EDGE_MASK_X>
-    <val_0>295.111114502</val_0>
+    <val_0>483.555541992</val_0>
 </EDGE_MASK_X>
 <EDGE_MASK_Y>
-    <val_0>316.444427490</val_0>
+    <val_0>238.222229004</val_0>
 </EDGE_MASK_Y>
 <EDGE_MASK_INNER_RADIUS>
-    <val_0>250.000000000</val_0>
+    <val_0>183.333328247</val_0>
 </EDGE_MASK_INNER_RADIUS>
 <EDGE_MASK_OUTER_RADIUS>
-    <val_0>350.000000000</val_0>
+    <val_0>280.000000000</val_0>
 </EDGE_MASK_OUTER_RADIUS>
 <VIDEO_SETTINGS>
     <val_0>0.000000000</val_0>
