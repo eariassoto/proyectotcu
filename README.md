@@ -31,3 +31,5 @@ http://www.eyewriter.org/ Página del proyecto
 https://github.com/eyewriter Repositorio código fuente
 
 http://openframeworks.cc/ Librería
+
+http://www.apple.com/es/quicktime/download/thankyou/index.html Quicktime
