@@ -2,6 +2,12 @@
 #include "testApp.h"
 #include "stdio.h"
 
+template <typename T>
+string NumberToString ( T Number ){
+ ostringstream ss;
+ ss << Number;
+ return ss.str();
+}
 
 //--------------------------------------------------------------
 testApp::testApp(){
@@ -32,7 +38,7 @@ void testApp::setup(){
 
 	eyeSmoothed.set(0,0,0);
 
-    bMouseSimulation = true; /// con esto se activa la simulacion con el mouse
+    bMouseSimulation = XML.getValue("app:input:mouseSimulation", 0);
     bMouseEyeInputSimulation = false;
 }
 
@@ -96,7 +102,6 @@ void testApp::update(){
 		ponger.update(pt.x, pt.y);
 	}
 
-
 	if (mode == MODE_TEST){
 		ofPoint pt = eyeSmoothed;
         testScene.update(pt.x, pt.y);
@@ -111,6 +116,14 @@ void testApp::update(){
     //    ofPoint pt = eyeSmoothed;
     //    mouseScene.update(pt);
     }
+
+    // guardar las coordenadas en archivo
+    ofPoint pt = eyeSmoothed;
+    x = pt.x;
+    y = pt.y;
+    coordFile.open("coord.txt");
+    coordFile << NumberToString(x) << "\n" << NumberToString(y) << "\n";
+    coordFile.close();
 }
 
 

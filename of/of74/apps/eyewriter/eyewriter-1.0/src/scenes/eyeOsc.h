@@ -33,6 +33,4 @@ public:
     string          HOST;
     int             PORT;
 
-    ofstream        coordFile;
-
 };

@@ -1,10 +1,12 @@
 #ifndef _TEST_APP
 #define _TEST_APP
 
+#include <fstream>
+#include <sstream>
 
 #include "ofMain.h"
 #include "testApp.h"
-#include "trackingManager.h"	
+#include "trackingManager.h"
 #include "calibrationManager.h"
 #include "testingScene.h"
 #include "typingScene.h"
@@ -15,8 +17,8 @@
 
 
 enum{
-	
-	MODE_TRACKING,  MODE_CALIBRATING,   MODE_TEST,  MODE_DRAW,  
+
+	MODE_TRACKING,  MODE_CALIBRATING,   MODE_TEST,  MODE_DRAW,
     MODE_TYPING,    MODE_PONG,          MODE_OSC,   MODE_MOUSE
 
 };
@@ -38,13 +40,13 @@ class testApp : public ofBaseApp {
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
 		void resized(int w, int h);
-        
+
         bool bMouseSimulation;
         bool bMouseEyeInputSimulation;
-    
+
         ofPoint eyeSmoothed;
-	
-        int mode; 
+
+        int mode, x, y;
 
 		//----- scenes
 
@@ -56,11 +58,13 @@ class testApp : public ofBaseApp {
         pongScene				ponger;
         eyeOsc                  oscScene;
         //mouseControl            mouseScene;
-	
+
 		//------ drawing
 		void drawHelp();
-        
-        float buttonSensitivity;     
+
+        float buttonSensitivity;
+
+        ofstream        coordFile;
 };
 
 #endif

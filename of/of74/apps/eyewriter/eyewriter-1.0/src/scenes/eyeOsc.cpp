@@ -7,16 +7,7 @@
 //
 
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include "eyeOsc.h"
-
-template <typename T>
-string NumberToString ( T Number ){
- ostringstream ss;
- ss << Number;
- return ss.str();
-}
 
 void eyeOsc::setup(){
 
@@ -43,9 +34,7 @@ void eyeOsc::update(float eyeX, float eyeY){
 	mY.addIntArg( y );
 	sender.sendMessage( mY );
     //cout << "x: " << x << " y: " << y << endl;
-    coordFile.open("coord.txt");
-    coordFile << NumberToString(x) << "\n" << NumberToString(y) << "\n";
-    coordFile.close();
+
     //need to add message for eye BLINK
 }
 void eyeOsc::draw(){

@@ -2,8 +2,10 @@
 	
 	<!-- mode, input 0 = live, 1 = video  -->
 
-	<mode>0</mode>
+	<mode>1</mode>
     
+	<!-- 1 para habilitar la simulacion del mouse, 0 para deshabilitar -->
+	<mouseSimulation>1</mouseSimulation>
 	
 	<!-- some per mode settings -->
 

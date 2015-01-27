@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="debug" />
-	<File name="..\..\..\openFrameworks\app\ofAppGlutWindow.cpp" open="1" top="0" tabpos="2">
+	<File name="..\..\..\openFrameworks\app\ofAppGlutWindow.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="1267" topLine="43" />
 	</File>
-	<File name="..\..\..\openFrameworks\utils\ofConstants.h" open="1" top="1" tabpos="3">
-		<Cursor position="3683" topLine="113" />
+	<File name="..\..\..\openFrameworks\utils\ofConstants.h" open="0" top="0" tabpos="3">
+		<Cursor position="3780" topLine="113" />
 	</File>
-	<File name="..\..\..\openFrameworks\video\ofQtUtils.cpp" open="1" top="0" tabpos="1">
+	<File name="..\..\..\openFrameworks\video\ofQtUtils.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="730" topLine="9" />
 	</File>
 </CodeBlocks_layout_file>
