@@ -32,7 +32,7 @@ void testApp::setup(){
 
 	eyeSmoothed.set(0,0,0);
 
-    bMouseSimulation = false;
+    bMouseSimulation = true; /// con esto se activa la simulacion con el mouse
     bMouseEyeInputSimulation = false;
 }
 

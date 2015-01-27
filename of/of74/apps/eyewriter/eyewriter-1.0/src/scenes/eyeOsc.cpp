@@ -7,38 +7,49 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include "eyeOsc.h"
 
+template <typename T>
+string NumberToString ( T Number ){
+ ostringstream ss;
+ ss << Number;
+ return ss.str();
+}
+
 void eyeOsc::setup(){
-    
+
     ofxXmlSettings XML;
 	XML.loadFile("settings/globalSettings.xml"); //in app/bin/data/settings
 	HOST = XML.getValue("app:osc:host", "");
     PORT = XML.getValue("app:osc:port", 0);
-    
+
 	// open an outgoing connection to HOST:PORT
 	sender.setup( HOST, PORT );
-    
+
 }
 void eyeOsc::update(float eyeX, float eyeY){
     x = eyeX;
     y = eyeY;
-    
+
     ofxOscMessage mX;
 	mX.setAddress( "/eye/pos/x" );
 	mX.addIntArg( x );
 	sender.sendMessage( mX );
-    
+
     ofxOscMessage mY;
 	mY.setAddress( "/eye/pos/y" );
 	mY.addIntArg( y );
 	sender.sendMessage( mY );
     //cout << "x: " << x << " y: " << y << endl;
-    
+    coordFile.open("coord.txt");
+    coordFile << NumberToString(x) << "\n" << NumberToString(y) << "\n";
+    coordFile.close();
     //need to add message for eye BLINK
 }
 void eyeOsc::draw(){
-    
+
     ofFill();
     ofSetColor(255,255,255);
     ofDrawBitmapString( ">>> eyeOSC <<<", 10, 20 );
@@ -51,9 +62,9 @@ void eyeOsc::draw(){
 }
 
 void eyeOsc::dragEvent(ofDragInfo dragInfo){
-    
+
 }
 void eyeOsc::gotMessage(ofMessage msg){
-    
-    
+
+
 }

@@ -8631,7 +8631,7 @@
 	"ofxXmlSettings.h"
 	"baseScene.h"
 
-1421800993 c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\scenes\eyeosc.h
+1422378573 c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\scenes\eyeosc.h
 	"ofMain.h"
 	"ofxOsc.h"
 	"ofxXmlSettings.h"
@@ -8665,8 +8665,10 @@
 1421800993 source:c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\scenes\basescene.cpp
 	"baseScene.h"
 
-1421800993 source:c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\scenes\eyeosc.cpp
+1422378734 source:c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\scenes\eyeosc.cpp
 	<iostream>
+	<fstream>
+	<sstream>
 	"eyeOsc.h"
 
 1421800993 source:c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\scenes\eyeplotter\drawingscene.cpp
@@ -8742,11 +8744,11 @@
 	"testingScene.h"
 	"testApp.h"
 
-1422292960 source:c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\scenes\typingscene.cpp
+1422296799 source:c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\scenes\typingscene.cpp
 	"typingScene.h"
 	"testApp.h"
 
-1421800993 source:c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\testapp.cpp
+1422373248 source:c:\proyectotcu\of\of74\apps\eyewriter\eyewriter-1.0\src\testapp.cpp
 	"testApp.h"
 	"stdio.h"
 
