@@ -1,5 +1,11 @@
+# Lista de Materiales #
+https://docs.google.com/document/d/1NKidaqosijoujj6fp2B99qCqkjTao7hXGNjHMD-J_-o/edit?usp=sharing
+
+
 # Sobre hardware #
-http://www.instructables.com/id/The-EyeWriter-20/ Versión 2
+http://www.instructables.com/id/The-EyeWriter-20/?ALLSTEPS Versión 2
+Nota: en esta pagina esta el diseño de una montura en madera que ellos hicieron, talvez la podamos modelar para la impresora
+
 
 # Sobre el software #
 Importante: Ubicar la carpeta de este repositorio en C:, osea tiene que quedar C:\proyectotcu de lo contrario no reconoce librerías
